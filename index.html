@@ -206,12 +206,28 @@
       margin-bottom: 40px;
     }
 
+    .left-column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .right-column {
+      display: flex;
+      flex-direction: column;
+    }
+
     /* Cards */
     .card {
       background: var(--white);
       border-radius: 16px;
       padding: 28px;
       border: 1px solid var(--gray-200);
+    }
+
+    .card.card-stretch {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .card-accent {
@@ -320,7 +336,8 @@
 
     /* Strategy Section */
     .strategy-section {
-      margin-bottom: 32px;
+      margin-bottom: 20px;
+      flex: 1;
     }
 
     .section-title {
@@ -347,7 +364,6 @@
     }
 
     .pillar-card:hover {
-      border-color: var(--teal);
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
 
@@ -361,6 +377,11 @@
       background: linear-gradient(135deg, var(--coral-light) 0%, var(--white) 100%);
     }
 
+    .pillar-card.pillar-light {
+      border-color: var(--gray-200);
+      background: linear-gradient(135deg, var(--cream) 0%, var(--white) 100%);
+    }
+
     .pillar-number {
       font-family: var(--font-display);
       font-size: 28px;
@@ -371,6 +392,10 @@
 
     .pillar-coral .pillar-number {
       color: var(--coral);
+    }
+
+    .pillar-light .pillar-number {
+      color: var(--gray-400);
     }
 
     .pillar-title {
@@ -387,7 +412,7 @@
 
     /* Targets Bar */
     .targets-bar {
-      background: var(--cream);
+      background: linear-gradient(135deg, var(--cream) 0%, var(--white) 100%);
       border-radius: 12px;
       padding: 20px 28px;
       display: flex;
@@ -1159,6 +1184,13 @@
       font-size: 12px;
       color: var(--gray-500);
       margin-top: 4px;
+    }
+
+    .conquest-math-footnote {
+      font-size: 10px;
+      color: var(--gray-400);
+      margin-top: 6px;
+      font-style: italic;
     }
 
     .conquest-math-symbol {
@@ -4810,7 +4842,7 @@
             </div>
 
             <!-- Challenge Card -->
-            <div class="card">
+            <div class="card card-stretch">
               <div class="card-label">The Challenge</div>
               <div class="challenge-list">
                 <div class="challenge-item">
@@ -4847,14 +4879,14 @@
                   <div class="pillar-desc">Paid ads + Shopee arbitrage + UGC social proof engine</div>
                 </div>
                 
-                <div class="pillar-card">
-                  <div class="pillar-number" style="color: var(--gray-400);">03</div>
+                <div class="pillar-card pillar-light">
+                  <div class="pillar-number">03</div>
                   <div class="pillar-title">Convert the Skeptic</div>
                   <div class="pillar-desc">Website CRO, quiz funnels, 1-to-1 Exchange as hero USP</div>
                 </div>
                 
-                <div class="pillar-card">
-                  <div class="pillar-number" style="color: var(--gray-400);">04</div>
+                <div class="pillar-card pillar-light">
+                  <div class="pillar-number">04</div>
                   <div class="pillar-title">Retain & Multiply</div>
                   <div class="pillar-desc">WhatsApp automation, predictive reorder, subscriptions</div>
                 </div>
@@ -5236,7 +5268,8 @@
             <div class="conquest-math-symbol">×</div>
             <div class="conquest-math-item">
               <div class="conquest-math-value">~RM3,000</div>
-              <div class="conquest-math-label">Diaper spend/year</div>
+              <div class="conquest-math-label">~2,700 diapers × ~RM1.10</div>
+              <div class="conquest-math-footnote">Based on ~7 diapers/day at premium pricing</div>
             </div>
             <div class="conquest-math-symbol">=</div>
             <div class="conquest-math-item">
